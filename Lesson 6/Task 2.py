@@ -17,7 +17,6 @@ BUTTON = ('xpath', '//button[@id="updatingButton"]')
 special_text = "SkyPro"
 text_input = driver.find_element(*INPUT_FIELD).send_keys(special_text)
 button = driver.find_element(*BUTTON).click()
-time.sleep(3)
 text_in_button = wait.until(EC.text_to_be_present_in_element(BUTTON, special_text))
 
 print(driver.find_element(*BUTTON).text)
